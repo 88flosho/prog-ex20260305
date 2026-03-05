@@ -25,4 +25,8 @@ public class Alumno {
         return edad;
     }
 
+    public String toString(){
+        sb.appends()
+    }
+
 }
