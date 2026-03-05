@@ -8,9 +8,17 @@ public class CentroFp {
        alumnos = new Alumno[MAX_ALUMNOS];
     }
 
-    public Alumno buscarAlumno(int id){
+    public Alumno buscarAlumno(int idAlumno){
+    boolean seguirBuscando = false;
+    Alumno alumnoEncontrado = null;
+        for (int i = 0; i < MAX_ALUMNOS && seguirBuscando; i++) {
+            if( alumnos[i] != null && alumnos[i].getId() == idAlumno ){
+                seguirBuscando = false;
+                alumnoEncontrado = alumnos[i];
+            }
+        }
 
-
+        return alumnoEncontrado;
     }
 
 
@@ -20,7 +28,14 @@ public class CentroFp {
 
 
 
-    public boolean registrarAlumno(Alumno alumno){}
+    public boolean registrarAlumno(Alumno alumno){
+        boolean anadidoAlumno = false;
+        for (int i = 0; i < MAX_ALUMNOS && anadidoAlumno; i++) {
+            if( alumnos[i] == null){
+                anadidoAlumno = true;
+            }
+        }
+    }
 
 
 
@@ -31,3 +46,8 @@ public class CentroFp {
 
     public int contarAlumnos(){}
 }
+
+}
+
+
+
