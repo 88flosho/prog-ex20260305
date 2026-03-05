@@ -37,12 +37,24 @@ public class CentroFp {
 
 
     public boolean registrarAlumno(Alumno alumno){
-
+        boolean alumnoAnadido = false;
+        int posicion;
+        if( registrarAlumno(alumno.getId()) == null ) {
+            posicion = buscarPrimerHuecoLibre();
+            if(posicion >= 0) {
+                alumnos[posicion] = alumno;
+                alumnoAnadido = true;
+            }
+        }
     }
 
 
 
     public String mostrarAlumnos(){
+        String alumnos = "";
+        for (int i = 0; i < MAX_ALUMNOS; i++) {
+
+        }
     }
 
 
