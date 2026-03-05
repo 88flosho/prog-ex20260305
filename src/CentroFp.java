@@ -40,7 +40,7 @@ public class CentroFp {
     public boolean registrarAlumno(Alumno alumno){
         boolean alumnoAnadido = false;
         int posicion;
-        if( registrarAlumno(alumno.getId()) == null ) {
+        if( registrarAlumno (alumno.getId()) == null ) {
             posicion = buscarPrimerHuecoLibre();
             if(posicion >= 0) {
                 alumnos[posicion] = alumno;
