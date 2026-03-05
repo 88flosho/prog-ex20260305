@@ -32,6 +32,7 @@ public class CentroFp {
                 seguirBuscando = false;
             }
         }
+        return posicionLibre;
     }
 
 
@@ -46,6 +47,7 @@ public class CentroFp {
                 alumnoAnadido = true;
             }
         }
+        return alumnoAnadido;
     }
 
 
@@ -53,15 +55,12 @@ public class CentroFp {
     public String mostrarAlumnos(){
         String alumnos = "";
         for (int i = 0; i < MAX_ALUMNOS; i++) {
-
+            if (alumnos != null){
+                System.out.println(mostrarAlumnos());
         }
     }
-
-
-
-    public int contarAlumnos(){}
+        return alumnos;
 }
-
 }
 
 
